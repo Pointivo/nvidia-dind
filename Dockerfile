@@ -2,12 +2,9 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-ARG UBUNTU_RELEASE=22.04
-FROM ubuntu:${UBUNTU_RELEASE}
+FROM nvidia/cuda:11.4.3-base-ubuntu20.04
 
-LABEL maintainer "https://github.com/ehfd"
-
-ARG UBUNTU_RELEASE
+LABEL maintainer "https://github.com/Pointivo/nvidia-dind"
 
 RUN apt-get update && apt-get install -y \
         apt-utils \
